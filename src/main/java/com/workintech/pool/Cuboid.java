@@ -1,16 +1,27 @@
 package com.workintech.pool;
 
 public class Cuboid extends Rectangle{
-    private float height;
+    //instance variables:
+    private double height;
 
-    public Cuboid(float width, float length, float height){
+    //constructor:
+    public Cuboid(double width, double length, double height) {
         super(width, length);
-        this.height = (height < 0) ? 0 : height;
+        setHeight(height);
     }
-    public float getHeight(){
+
+    //getter methods:
+    public double getHeight() {
         return height;
     }
-    public float getVolume(){
+
+    //setter methods:
+    public void setHeight(double height) {
+        this.height = (height < 0) ? 0 : height;
+    }
+
+    //methods:
+    public double getVolume() {
         return getArea()*height;
     }
 }

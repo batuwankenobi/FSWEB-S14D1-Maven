@@ -1,20 +1,39 @@
 package com.workintech.pool;
 
 public class Rectangle {
-    private float width;
-    private float length;
+    //instance variables:
+    private double width;
+    private double length;
 
-    public Rectangle(float width, float length){
-        this.width = (width <0) ? 0 : width;
-        this.length = (width <0) ? 0 : length;
+    //constructor:
+    public Rectangle(double width, double length){
+        setWidth(width);
+        setLength(length);
     }
-    public float getWidth(){
+
+    //getter methods:
+    public double getWidth() {
         return width;
     }
-    public float getLength(){
+
+    public double getLength() {
         return length;
     }
-    public float getArea(){
+
+    //setter methods:
+    public void setWidth(double width) {
+        this.width = (width < 0) ? 0 : width;
+    }
+
+    public void setLength(double length) {
+        this.length = (length < 0) ? 0 : length;
+    }
+
+    //methods:
+    public double getArea() {
         return width*length;
     }
+
+
+
 }

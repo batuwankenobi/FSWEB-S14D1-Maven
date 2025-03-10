@@ -1,19 +1,24 @@
 package com.workintech.cylinder;
 
-public class Circle{
+public class Circle {
+    //instance variables:
     private double radius;
 
-    public Circle(double radius){
-        if(radius<0){
-            this.radius = 0;
-        }else{
-            this.radius = radius;
+    //constructor:
+    public Circle( double radius){
+        if(radius < 0){
+            radius = 0;
         }
+        this.radius = radius;
     }
-    public double getRadius(){
+
+    //getter methods:
+    public double getRadius() {
         return radius;
     }
-    public double getArea(){
-        return radius * radius * Math.PI;
+
+    //methods:
+    public double getArea() {
+        return radius*radius*Math.PI;
     }
 }

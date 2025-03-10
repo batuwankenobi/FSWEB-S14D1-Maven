@@ -1,13 +1,14 @@
 package com.workintech.developers;
 
-public class SeniorDeveloper extends Employee {
-    public SeniorDeveloper(int id, String name, double salary) {
+public class SeniorDeveloper extends Employee{
+    public SeniorDeveloper(long id, String name, double salary) {
         super(id, name, salary);
     }
 
+    //override method:
     @Override
-    public void work() {
-        System.out.println("Senior Developer's Salary increased by 30%.");
-        setSalary(getSalary() * 1.30); // Maaşı %20 artır
+    public void work(){
+        setSalary(getSalary() + 30000);
+        System.out.println(getName() + " works as a Senior Developer. Salary increased to " + getSalary());
     }
 }
